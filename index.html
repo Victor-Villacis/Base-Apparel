@@ -27,6 +27,7 @@
       * {
         font-family: "Josefin Sans", sans-serif;
       }
+	  
 
       .attribution {
         font-size: 11px;
@@ -37,49 +38,88 @@
       }
 
       .background-right {
-        height: 100vh;
+		height: 100vh;
         background-image: url(images/hero-desktop.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
+		background-size: cover;
       }
 
       .background-left {
         height: 100vh;
         background-image: url(images/bg-pattern-desktop.svg);
         background-size: cover;
-        background-repeat: no-repeat;
       }
+
+	  .is-vertical-center {
+			display: grid;
+			align-items: center;
+			background: red;
+			}
     </style>
   </head>
   <body>
     <main class="is-clearfix">
-      <section class=" column is-half is-pulled-left background-left">
-        <div class="container">
-          <figure class="">
-            <img src="images/logo.svg" alt="logo" />
-          </figure>
+      <section class="section column is-half is-pulled-left background-left">
+        <div class="container is-flex is-fluid" style="background: chartreuse; height: 100%;">
+		 
+			<div class="" style="margin: auto;">
 
-          <div>
-            <h1>
-              <span>We're </span><br />
-              <span>Coming</span><br />
-              <span>Soon </span><br />
-            </h1>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
-              dicta optio, temporibus ex fugiat quidem aspernatur distinctio a
-              recusandae repellat excepturi, quis, aut id? Cum reprehenderit
-              magnam minima non laboriosam?
-            </p>
-            <form action="submit">
-              <input type="text" placeholder="Email Address" />
-            </form>
-          </div>
-        </div>
-      </section>
-      <section
-        class="column is-half is-pulled-right background-right is-hidden-mobile"
-      ></section>
+			<div class="column" style="border: 1px solid black; position: absolute; bottom: 95%;">
+				<figure class="image">
+					<img src="images/logo.svg" alt="logo" />
+				</figure>
+			</div>
+					
+			<div class="column" style="border: 1px solid red;">
+				<h1>
+					<span class="is-block">We're </span>
+					<span class="is-block">Coming</span>
+					<span class="is-block">Soon </span>
+				</h1>
+				<p class=" has-text-justified">
+					Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
+				</p>
+			</div>
+			
+			<div class="column" style="border: 1px solid green;">
+				<form action="submit">
+					<input type="text" placeholder="Email Address" />
+				</form>
+			</div>
+
+			</div>
+		</div>
+	  </section>
+	  
+      <section class="section column is-half is-pulled-right background-right is-hidden-mobile"></section>
     </main>
   </body>
 </html>
+      <!-- <div class="column is-half is-pulled-left is-full-mobile">
+        <figure>
+          <img src="images/logo.svg" alt="">
+        </figure>
+      </div>
+      <div class="column is-half is-pulled-right">
+        <figure class="image is-hidden-desktop is-hidden-tablet ">
+          <img src="images/hero-mobile.jpg" alt="">
+        </figure>
+        <div class="">
+        <figure class=" main-image is-hidden-mobile"> -->
+          <!-- <img src="images/hero-desktop.jpg" alt=""> -->
+        <!-- </figure>
+        </div>
+      </div>
+   
+      <div class="column is-half is-pulled-left has-text-centered has-text-justified-desktop has-text-justified-tablet hero-body">
+        <div class="is-hidden-mobile" id="center-helper"></div>
+        <div class="is-uppercase title" id="body-text"> 
+          <span>We're  <br></span>
+          <span>Coming <br></span>
+          <span>Soon   <br></span>
+        </div>
+        <p>Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+        <form action="">
+          <input type="text" placeholder="Email Address">
+        </form>
+      </div> -->
