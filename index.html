@@ -1,97 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css"> -->
-  
-<!-- Adjust height of content we are coming soon based on the size of the image, adjust it dynamically? -->
-  
-  <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css"> -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    * {
-      font-family: 'Josefin Sans', sans-serif;
-    }
+    <!-- Adjust height of content we are coming soon based on the size of the image, adjust it dynamically? -->
 
-    #body-text {
-      letter-spacing: 18px;
-      font-size: 4vh;
-    }
-    
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
 
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        font-family: "Josefin Sans", sans-serif;
+      }
 
-    /* * {
-      border: 1px dotted magenta;
-    } */
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
 
-    #center-helper {
-      position: relative;
-      height: 10vh;
-    }
+      .background-right {
+        height: 100vh;
+        background-image: url(images/hero-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
 
-    section {
-      background: url(images/bg-pattern-desktop.svg);
-    }
+      .background-left {
+        height: 100vh;
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="is-clearfix">
+      <section class=" column is-half is-pulled-left background-left">
+        <div class="container">
+          <figure class="">
+            <img src="images/logo.svg" alt="logo" />
+          </figure>
 
-  
-
-  </style>
-</head>
-<body>
-
-  <main class="container">
-    <section class="section is-clearfix">
-      <div class="column is-half is-pulled-left is-full-mobile">
-        <figure>
-          <img src="images/logo.svg" alt="">
-        </figure>
-      </div>
-      <div class="column is-half is-pulled-right">
-        <figure class="image is-hidden-desktop is-hidden-tablet ">
-          <img src="images/hero-mobile.jpg" alt="">
-        </figure>
-        <div class="">
-        <figure class="image is-hidden-mobile">
-          <img src="images/hero-desktop.jpg" alt="">
-        </figure>
+          <div>
+            <h1>
+              <span>We're </span><br />
+              <span>Coming</span><br />
+              <span>Soon </span><br />
+            </h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam
+              dicta optio, temporibus ex fugiat quidem aspernatur distinctio a
+              recusandae repellat excepturi, quis, aut id? Cum reprehenderit
+              magnam minima non laboriosam?
+            </p>
+            <form action="submit">
+              <input type="text" placeholder="Email Address" />
+            </form>
+          </div>
         </div>
-      </div>
-   
-      <div class="column is-half is-pulled-left has-text-centered has-text-justified-desktop has-text-justified-tablet hero-body">
-        <div class="is-hidden-mobile" id="center-helper"></div>
-        <div class="is-uppercase title" id="body-text"> 
-          <span>We're  <br></span>
-          <span>Coming <br></span>
-          <span>Soon   <br></span>
-        </div>
-        <p>Hello fellow shoppers! We're currently building our new fashion store. 
-        Add your email below to stay up-to-date with announcements and our launch deals.</p>
-        <form action="">
-          <input type="text" placeholder="Email Address">
-        </form>
-      </div>
-   
-  
-    </section>
-    <footer class="footer">
-      <p class="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Your Name Here</a>.
-      </p>
-    </footer>
-  </main>
-
-  
-
-  
-
-</body>
+      </section>
+      <section
+        class="column is-half is-pulled-right background-right is-hidden-mobile"
+      ></section>
+    </main>
+  </body>
 </html>
