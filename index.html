@@ -79,18 +79,19 @@
 		}
 	  } */
 
-	  .hero-body-font {
+	  .left-body-font {
 		  font-size: 70px;
 		  letter-spacing: 8px;
+		  
 		
 	  }
 
-	  .hero-body-color, p{
+	  .left-body-color, p{
 		  color: hsl(0, 36%, 70%)
 	  }
 
 	  .font-weight {
-		  font-weight: 300px;
+		  font-weight: 500px;
 	  }
 
 	  /* twitter.com/Una/status/951519740840873984 */
@@ -103,32 +104,69 @@
 		right: 50%;
 		width: 100vw;
 	}
+
+	.form-input {
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		background: transparent;
+		
+	}
+
+	.form-error {
+		border: 1px solid red;
+		border-radius: 10px;
+		background: transparent;
+	}
 	
+	.button {
+	background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	border-radius: 100px;
+	height: 50px;
+	width: 100px;
+	position: relative;
+	right: 55px;
+	bottom: 3px;
+	}
+
+
+
+	.error-message {
+		color: red;
+		
+	}
+
+	.error-icon {
+	
+		position: relative;
+		top: 10px;
+		right: 50px;
+	}
     </style>
   </head>
 
   <body>
-    <main class="is-clearfix">
+    <main>
       <section class=" column is-half is-pulled-left background-left">
         <div class="hero is-fullheight-with-navbar">
 		 
-			<div class="" style="margin: auto;">
+			<div style="margin: auto;" id="body-container">
 
-			<div class="">
-				<figure class="">
+			<div class=" is-marginless">
+				<figure class=" hero" style="position: absolute; top: 3vh;">
 					<img src="images/logo.svg" alt="logo" />
 				</figure>
 			</div>
 
 			<div class=" is-hidden-tablet full-width">
-				<figure class="image is-full-mobile">
+				<figure class="image">
 					<img src="images/hero-mobile.jpg" alt="">
 				</figure>
 			</div>
 					
-			<div class="column " style="border: 1px solid red;">
-				<div class=" has-text-centered-mobile is-uppercase hero-body-font">
-					<span class="is-block is-size-3-mobile hero-body-color font-weight">We're </span>
+			<div class="column ">
+				<div class=" has-text-centered-mobile is-uppercase left-body-font">
+					
+					<span class="is-block is-size-3-mobile left-body-color ">We're </span>
 					<span class="is-block has-text-weight-bold is-size-3-mobile">Coming</span>
 					<span class="is-block has-text-weight-bold is-size-3-mobile">Soon </span>
 				</div>
@@ -140,10 +178,13 @@
 				</div>
 			</div>
 			
-			<div class="column" style="border: 1px solid green;">
+			<div class="column is-offset-1-mobile">
 				<form action="submit">
-					<input type="text" placeholder="Email Address" />
+					<input class=" form-input column is-half is-pulled-left is-half-mobile" type="email" name="email" label="email" id="email" placeholder="Email Address" />
+					<img class="error-icon" src="images/icon-error.svg" alt="error">
+					<button class="button"> <img src="images/icon-arrow.svg" alt="button"></button>
 				</form>
+				<span class="error-message column">Please provide a valid email</span>
 			</div>
 
 			</div>
@@ -153,7 +194,9 @@
 	  <section class="hero background-right "></section>
 
 	  
+<script>
 
+</script>
 		
 
 			
