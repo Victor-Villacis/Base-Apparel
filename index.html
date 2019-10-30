@@ -1,217 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css"> -->
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Base Apparel</title>
 
-    <!-- Adjust height of content we are coming soon based on the size of the image, adjust it dynamically? -->
+</head>
 
-    <title>Frontend Mentor | Base Apparel coming soon page</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-		
-
-
-
-      * {
-        font-family: "Josefin Sans", sans-serif;
-		
-      }
-	  
-
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-
-      .background-right {
-		height: 100vh;
-        background-image: url(images/hero-desktop.jpg);
-		background-size: cover;
-      }
-
-      .background-left {
-        height: 100vh;
-        background-image: url(images/bg-pattern-desktop.svg);
-        background-size: cover;
-      }
-
-	  .left-body-font {
-		  font-size: 70px;
-		  letter-spacing: 8px;
-		  
-		
-	  }
-
-	  .left-body-color, p{
-		  color: hsl(0, 36%, 70%)
-	  }
-
-	  .font-weight {
-		  font-weight: 500px;
-	  }
-
-	  /* THANKS! twitter.com/Una/status/951519740840873984 */
-	  .full-width {
-		left: 50%;
-		margin-left: -50vw;
-		margin-right: -50vw;
-		max-width: 100vw;
-		position: relative;
-		right: 50%;
-		width: 100vw;
-	}
-
-	.form-input {
-		border: 1px solid #ccc;
-		border-radius: 10px;
-		background: transparent;
-		
-	}
-
-
-	
-	.button {
-	background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-	border-radius: 100px;
-	width: 70px;
-	height: 48px;
-	position: relative;
-	right: 55px;
-	bottom: 3px;
-	}
-
-
-
-	.error-message {
-		color: red;
-		
-	}
-
-	.error-icon {
-	
-		position: relative;
-		top: 10px;
-		left: 55px;
-	}
-
-
-    </style>
-  </head>
-
-  <body>
-    <main>
-      <section class=" column is-half is-pulled-left background-left">
-        <div class="hero is-fullheight-with-navbar">
-		 
-			<div style="margin: auto;" id="body-container">
-
-			<div class=" is-marginless">
-				<figure class=" hero" style="position: absolute; top: 3vh;">
-					<img src="images/logo.svg" alt="logo" />
-				</figure>
-			</div>
-
-			<div class=" is-hidden-tablet full-width">
-				<figure class="image">
-					<img src="images/hero-mobile.jpg" alt="">
-				</figure>
-			</div>
-					
-			<div class="column ">
-				<div class=" has-text-centered-mobile is-uppercase left-body-font">
-					
-					<span class="is-block is-size-3-mobile left-body-color ">We're </span>
-					<span class="is-block has-text-weight-bold is-size-3-mobile">Coming</span>
-					<span class="is-block has-text-weight-bold is-size-3-mobile">Soon </span>
-				</div>
-
-				<div class="column is-half">
-				<p class="">
-					Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.
-				</p>
+<body>
+	<main>
+		<section class=" column is-half is-pulled-left background-left">
+			<div class="hero is-fullheight-with-navbar">
+				<div class="center-body-text" id="body-container">
+					<div>
+						<figure class="column is-hidden-tablet">
+							<img src="images/logo.svg" alt="logo" />
+						</figure>
+						<figure class="column is-hidden-mobile logo-desktop">
+							<img src="images/logo.svg" alt="logo" />
+						</figure>
+					</div>
+					<div class=" is-hidden-tablet full-width">
+						<figure class="image">
+							<img src="images/hero-mobile.jpg" alt="" />
+						</figure>
+					</div>
+					<div class="column ">
+						<div class=" has-text-centered-mobile is-uppercase left-body-font">
+							<span class="is-block is-size-3-mobile left-body-color ">We're</span>
+							<span class="is-block has-text-weight-bold is-size-3-mobile">Coming</span>
+							<span class="is-block has-text-weight-bold is-size-3-mobile">Soon</span>
+						</div>
+						<div class="column is-half">
+							<p class="">
+								Hello fellow shoppers! We're currently building our new
+								fashion store. Add your email below to stay up-to-date with
+								announcements and our launch deals.
+							</p>
+						</div>
+					</div>
+					<div class="column">
+						<form id="form" action="submit">
+							<input class=" form-input column is-half is-pulled-left is-half-mobile " type="text"id="email" placeholder="Email Address" />
+							<img class="error-icon is-hidden" src="images/icon-error.svg" alt="error" id="error-icon" />
+							<button class="button" type="submit" id="button">
+								<img src="images/icon-arrow.svg" alt="button" />
+							</button>
+						</form>
+						<span class="displayMessage column is-hidden" id="error-message"></span>
+					</div>
 				</div>
 			</div>
-			
-			<div class="column ">
-				<form id="form" action="submit">
-					<input class=" form-input column is-half is-pulled-left" type="text" id="email" placeholder="Email Address" />
-					<img class="error-icon is-hidden" src="images/icon-error.svg" alt="error" id="error-icon">
-					<button class=" button column" type="submit" id="button" onclick=""> <img src="images/icon-arrow.svg" alt="button"></button>
-				</form>
-				<span class="error-message column is-hidden" id="error-message"></span>
-			</div>
+		</section>
+		<section class="hero background-right "></section>
 
-			</div>
-		</div>
-	  </section>
+		<script src="validator.js"></script>
+	</main>
+</body>
 
-	  
-	  <section class="hero background-right "></section>
-
-	  
-<script>
-EventTarget.prototype.addEventListener = (() => {
-  const addEventListener = EventTarget.prototype.addEventListener;
-  return function() {
-    addEventListener.apply(this, arguments);
-    //"this"  allows the object that it is invoked against to be returned, allowing chain
-    return this;
-  };
-})();
-
-let element = document.getElementById("error-message");
-let element2 = document.getElementById("error-icon");
-let element3 = document.getElementById("email");
-
-document.querySelector("form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  let email = document.getElementById("email").value;
-  function emailIsValid (email) {
-	  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
-	}
-
-	if(emailIsValid(email) === true){
-		document.getElementById("error-message").innerHTML = email + ' sent ✔';
-		document.getElementById('email').style.border = '1px solid green';
-		element2.classList.add("is-hidden")
-		element2.classList.add("error-style")
-		element.classList.remove("is-hidden");
-	}
-	else  {
-		let element = document.getElementById("error-message")
-		document.getElementById('email').style.border = '1px solid red';
-		element.classList.remove("is-hidden");
-		element2.classList.remove("is-hidden");
-		
-		document.getElementById("error-message").innerHTML = ' Please provide a valid email';
-	}
-});
-
-
-
-</script>
-		
-
-			
-    </main>
-  </body>
 </html>
