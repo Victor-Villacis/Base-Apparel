@@ -22,7 +22,9 @@
     font-size: 70px;
     letter-spacing: 8px;
 }
-.left-body-color,
+.left-body-color, p {
+    color: hsl(0, 36%, 70%);
+}
 /* THANKS! twitter.com/Una/status/951519740840873984 */
 .full-width {
     left: 50%;
@@ -65,12 +67,8 @@
     margin: auto;
 }
 
-p {
-    color: hsl(0, 36%, 70%);
-}
-
 footer {
-    position: fixed;
-    bottom: 1vh;
-    left: 10px;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
 }
