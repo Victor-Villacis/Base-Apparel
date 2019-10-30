@@ -25,17 +25,8 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
 		
-		html {
-		height: 100%;
-		
-		box-sizing: border-box;
-	}
 
-		*,
-		*:before,
-		*:after {
-			box-sizing: inherit;
-		}
+
 
       * {
         font-family: "Josefin Sans", sans-serif;
@@ -63,22 +54,6 @@
         background-size: cover;
       }
 
-	  /* @media only screen and (max-width: 768px) {
-		 .hero-body-font-mobile {
-		  font-size: 38px;
-		  letter-spacing: 12px;
-		  line-height: 100%;
-		 }
-	  }
-
-  @media only screen and (min-width: 768px) {
-		.hero-body-font-mobile {
-			font-size: 58px;
-			letter-spacing: 15px;
-			line-height: 100%;
-		}
-	  } */
-
 	  .left-body-font {
 		  font-size: 70px;
 		  letter-spacing: 8px;
@@ -94,7 +69,7 @@
 		  font-weight: 500px;
 	  }
 
-	  /* twitter.com/Una/status/951519740840873984 */
+	  /* THANKS! twitter.com/Una/status/951519740840873984 */
 	  .full-width {
 		left: 50%;
 		margin-left: -50vw;
@@ -112,17 +87,13 @@
 		
 	}
 
-	.form-error {
-		border: 1px solid red;
-		border-radius: 10px;
-		background: transparent;
-	}
+
 	
 	.button {
 	background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 	border-radius: 100px;
-	height: 50px;
-	width: 100px;
+	width: 70px;
+	height: 48px;
 	position: relative;
 	right: 55px;
 	bottom: 3px;
@@ -139,8 +110,10 @@
 	
 		position: relative;
 		top: 10px;
-		right: 50px;
+		left: 55px;
 	}
+
+
     </style>
   </head>
 
@@ -178,23 +151,62 @@
 				</div>
 			</div>
 			
-			<div class="column is-offset-1-mobile">
-				<form action="submit">
-					<input class=" form-input column is-half is-pulled-left is-half-mobile" type="email" name="email" label="email" id="email" placeholder="Email Address" />
-					<img class="error-icon" src="images/icon-error.svg" alt="error">
-					<button class="button"> <img src="images/icon-arrow.svg" alt="button"></button>
+			<div class="column ">
+				<form id="form" action="submit">
+					<input class=" form-input column is-half is-pulled-left" type="text" id="email" placeholder="Email Address" />
+					<img class="error-icon is-hidden" src="images/icon-error.svg" alt="error" id="error-icon">
+					<button class=" button column" type="submit" id="button" onclick=""> <img src="images/icon-arrow.svg" alt="button"></button>
 				</form>
-				<span class="error-message column">Please provide a valid email</span>
+				<span class="error-message column is-hidden" id="error-message"></span>
 			</div>
 
 			</div>
 		</div>
 	  </section>
+
 	  
 	  <section class="hero background-right "></section>
 
 	  
 <script>
+EventTarget.prototype.addEventListener = (() => {
+  const addEventListener = EventTarget.prototype.addEventListener;
+  return function() {
+    addEventListener.apply(this, arguments);
+    //"this"  allows the object that it is invoked against to be returned, allowing chain
+    return this;
+  };
+})();
+
+let element = document.getElementById("error-message");
+let element2 = document.getElementById("error-icon");
+let element3 = document.getElementById("email");
+
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  let email = document.getElementById("email").value;
+  function emailIsValid (email) {
+	  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+	}
+
+	if(emailIsValid(email) === true){
+		document.getElementById("error-message").innerHTML = email + ' sent ✔';
+		document.getElementById('email').style.border = '1px solid green';
+		element2.classList.add("is-hidden")
+		element2.classList.add("error-style")
+		element.classList.remove("is-hidden");
+	}
+	else  {
+		let element = document.getElementById("error-message")
+		document.getElementById('email').style.border = '1px solid red';
+		element.classList.remove("is-hidden");
+		element2.classList.remove("is-hidden");
+		
+		document.getElementById("error-message").innerHTML = ' Please provide a valid email';
+	}
+});
+
+
 
 </script>
 		
