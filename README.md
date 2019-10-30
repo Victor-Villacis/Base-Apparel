@@ -37,9 +37,10 @@ Your task is to build out the project to the designs inside the `/design` folder
 * Applying Bulma classes in right order
 * Displaying logo in correct position in both mobile and desktop
 * Centering main body text
-* Breaking out of div for mobile background image (*reused code)
+* Breaking out of div for mobile hero image (*reused code)
 * Making background images flow correctly
 
 
 ### Improvements
 * Can make mobile layout look better
+* Can possibly make mobile image "background-image"
